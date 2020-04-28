@@ -1,0 +1,28 @@
+* {
+	font-family: Arial;
+	color:white;
+}
+body {
+	background-image:url(pictures/pizza.jpg);
+}
+caption {
+	text-align: center;
+	margin: auto;
+	background-color: #ef774f;
+	max-width: 600px;
+}
+table {
+	border: solid 1px black;
+	border-top-width: 0px;
+	margin: auto;
+	background-color: #ef774f;
+}
+button{
+	color:black;
+}
+th {
+	vertical-align: top;
+}
+#buttons {
+	text-align: center;
+}
