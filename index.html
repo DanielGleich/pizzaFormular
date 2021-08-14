@@ -4,65 +4,68 @@
 	<meta charset="utf-8">	
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Pizza-Service</title>
+	<style>
+		* {
+			color: black;
+		}
+	</style>
+	<script src="script.js"></script>
 </head>
 <body>
-	<form>
+	<form action="server.php" method="POST">
 		<table>
 			<caption>Stellen Sie sich Ihre eigene Pizza zusammen!</caption>
 			<tr>
 				<th>Anrede:</th>
 				<td>
-					Herr <input type="radio" name="sex" value="male">
-					Frau <input type="radio" name="sex" value="female">
+					<input type="radio" name="sex" value="male" required> Herr 
+					<input type="radio" name="sex" value="female" required> Frau 
 				</td>
 			</tr>
 			<tr>
 				<th>Vorname:</th>
-				<td><input name="givenName" maxlength="50" size="50"></td>
+				<td><input name="firstName" maxlength="50" size="50" required>
 			</tr>
 			<tr>
 				<th>Nachname:</th>
-				<td> <input name="surName" maxlength="50" size="50"></td>				
+				<td> <input name="lastName" maxlength="50" size="50" required>				
 			</tr>
 			<tr>
 				<th>
 					Postleitzahl:
 				</th>
-				<td><input name="ZIPcode" maxlength="50" size="50"></td>
+				<td><input name="ZIPcode" maxlength="50" size="50" required>
 			</tr>
 			<tr>
 				<th>Ort :</th>
-			 <td><input name="adressCity" maxlength="50" size="50"></td>
-			</tr>
+			 <td><input name="city" maxlength="50" size="50" required/>
 			<tr>
 				<th>Straße:</th>
-				<td><input name="adressStreet" maxlength="50" size="50"></td>
+				<td><input name="street" maxlength="50" size="50" required/>
 			</tr>
 		</table>
-	</form>
-	<form>
 		<table>
 			<tr>
 				<th>Größe:</th>
 				<td>
-					<input type="radio" name="pizzaSize" value="26">Normal (26cm ø)
-					<input type="radio" name="pizzaSize" value="30">Groß (30cm ø)
+					<input type="radio" name="size" value="26" required>Normal (26cm ø)
+					<input type="radio" name="size" value="30" required>Groß (30cm ø)
 				</td>
 			</tr>
 			<tr>
 				<th>Käse:</th>
 				<td>
-					<label for="cheeseCount">50g</label>
-					<input id="cheeseCount" type="range" name="pizzaCheese" min="50" max="200">
-					<label for="cheeseCount">200g</label>
+					<label for="cheese">50g</label>
+					<input name="cheese" type="range" min="50" max="200">
+					<label for="cheese">200g</label>
 				</td>
 			</tr>
 			<tr>
 				<th>Extras:</th>
 				<td>
-					 <input type="checkbox" name="salami"> Salami <br>
-					 <input type="checkbox" name="pepper"> Paprika <br>
-					 <input type="checkbox" name="ham"> Schinken <br>
+					 <input type="checkbox" name="salami" value="yes"> Salami <br>
+					 <input type="checkbox" name="pepper" value="yes"> Paprika <br>
+					 <input type="checkbox" name="ham" value="yes"> Schinken <br>
 				</td>
 			</tr>
 		</table>
